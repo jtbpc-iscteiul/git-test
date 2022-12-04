@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-old.css">
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -31,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton" >
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -42,13 +43,13 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header navbar-dark">
                     <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body purple">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -88,7 +89,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-warning" data-toggle="modal" data-target="#reservationModal" title="Or Call Us at <br><strong>+12345566</strong>">
+                    <a id="reservationButton" class="btn btn-warning" title="Or Call Us at <br><strong>+12345566</strong>">
                         Reserve Table
                     </a>
                 </div>
@@ -232,13 +233,13 @@
     <div id="reservationModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header navbar-dark">
                     <h4 class="modal-title">Reserve a Table</h4>
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body purple">
                     <form>
                         <div class="form-group row">
                             <label for="firstname" class="col-md-3 col-form-label">Number of Guests</label>
@@ -319,29 +320,12 @@
         </div>
     </div>
 
-
-    <!-- jQuery first, then Popper, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 500 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-        });
-    </script>
+     <!-- build:js js/main.js -->
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="js/scripts.js"></script>
+     <!-- endbuild -->
 
 </body>
 

@@ -38,10 +38,6 @@
     background-color: #512DA8;
 }
 
-.yellow-button {
-    background-color: goldenrod;
-}
-
 .tab-content {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -69,4 +65,12 @@
     position:absolute;
     bottom:0px;
     z-index: 1;
+}
+
+.modal-title {
+    color:white;
+}
+
+.purple {
+    background: #D1C4E9;
 }
